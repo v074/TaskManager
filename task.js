@@ -13,9 +13,11 @@ let managerActive=true;
 
 let userInput;
 
-let tasks=["Charge MacBook","Master JavaScript"];
+let tasks=[`Charge MacBook`,`Master JavaScript`];
 
-let taskList="";
+let taskList=``;
+
+let taskName;
 
 while(managerActive==true){
     userInput=prompt(InputPrompt);
@@ -28,7 +30,9 @@ while(managerActive==true){
         }
         alert(taskList);
     }else if(userInput=="NEW"){
-        alert(`this is a placeholder`);
+        taskName=prompt(`Please enter the new task:`);
+        tasks.push(taskName);
+        alert(`"${taskName}" has been added!`);
     }else if(userInput=="REMOVE"){
         alert(`this is a placeholder`);
     }else if(userInput=="CLOSE"){
