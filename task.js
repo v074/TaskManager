@@ -11,7 +11,7 @@ What would you like to do (Please enter one of the options below):
 `;
 let managerActive = true;
 let userInput;
-let tasks = [`Charge MacBook`, `Master JavaScript`];
+const tasks = [`Charge MacBook`, `Master JavaScript`];
 let taskList;
 let taskName;
 let removeInput;
