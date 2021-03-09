@@ -18,11 +18,11 @@ let removeInput;
 let num;
 
 // Task Manager loop: does not close until told to.
-while (managerActive == true) {
+while (managerActive === true) {
     // Prompts the user for input.
-    userInput = prompt(InputPrompt);
+    userInput = prompt(InputPrompt).toUpperCase();
     // Input case: TASKS.
-    if (userInput.toUpperCase() == `TASKS`) {
+    if (userInput === `TASKS`) {
         // Initializing the string used to output.
         taskList = ``;
         // Going through the array of tasks, adding each item to the display.
@@ -33,7 +33,7 @@ while (managerActive == true) {
         alert(taskList);
 
     // Input case: NEW
-    } else if (userInput.toUpperCase() == `NEW`) {
+    } else if (userInput === `NEW`) {
         // Prompts user for a new task name.
         taskName = prompt(`Please enter the new task:`);
         // Verifies to ensure the task is not empty.  If it is, queries the user until they provide a non-empty task name.
@@ -44,7 +44,7 @@ while (managerActive == true) {
         tasks.push(taskName);
         alert(`"${taskName}" has been added!`);
     // Input case: REMOVE
-    } else if (userInput.toUpperCase() == `REMOVE`) {
+    } else if (userInput === `REMOVE`) {
         // If the list is empty, throws an error and returns the user to the main menu.
         if (tasks.length < 1) {
             alert(`There are no tasks to remove.`);
@@ -72,7 +72,7 @@ while (managerActive == true) {
             tasks.splice(removeInput - 1, 1);
         }
     // Input case: CLOSE
-    } else if (userInput.toUpperCase() == `CLOSE`) {
+    } else if (userInput === `CLOSE`) {
         // Throws an alert to the user, and then sets the loop to end, functionally quitting the task manager.
         alert(`Thank you for using Task Manager!`);
         managerActive = false;
